@@ -49,6 +49,12 @@ def main() -> None:
     path = os.path.join(out_dir, "entry.txt")
     with open(path, "w", encoding="utf-8") as f:
         f.write(WORD)
+    # Round-trip verify: the gate reads this file, so confirm byte-exactly
+    # what was written before reporting success.
+    with open(path, "rb") as f:
+        if f.read() != WORD.encode("utf-8"):
+            print("ERROR: round-trip verify failed: entry.txt mismatch", file=sys.stderr)
+            sys.exit(1)
 
 
 if __name__ == "__main__":
