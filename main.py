@@ -1,24 +1,25 @@
 #!/usr/bin/env python3
-"""Describe Your Ex in One Word: make.fun entry.
+"""Describe Your Ex in One Word: make.fun entry (round 2 resubmit).
 
 Writes one word to /output/entry.txt. Deterministic: the same word every
 run, no input, no network, no environment secrets. The word is a
 self-contained one-word verdict on an ex: the joke arrives with the word
 itself.
 
-The word: Freemium.
-  The ex treated affection like a freemium service: the basics were free,
-  but the good stuff -- attention, honesty, commitment -- sat behind a
-  paywall. A precise absurdity (a SaaS pricing model applied to a person),
-  instantly readable as a verdict, surprising, correctly spelled, and
-  universally recognizable in the app era.
+The word: Placebo.
+  The ex was a placebo: it looked like love, felt like love for a while,
+  and did absolutely nothing -- every effect was supplied by my own head.
+  A precise absurdity (a fake treatment applied to a relationship),
+  instantly readable as a verdict, surprising (a medical term as an ex
+  verdict), correctly spelled, and universally recognizable: everyone
+  knows what a sugar pill is.
 """
 
 import os
 import sys
 
 # The entry: exactly one word, 1-111 characters, nothing else attached.
-WORD = "Freemium"
+WORD = "Placebo"
 
 MAX_CHARS = 111
 
